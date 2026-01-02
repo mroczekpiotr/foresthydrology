@@ -1,3 +1,3 @@
-# Forest Hydrology — Hugo site scaffold
+# Forest Hydrology
 
 Szkielet strony Hugo dla foresthydrology.com.
