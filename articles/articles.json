@@ -1,0 +1,23 @@
+[
+  {
+    "id": "care-of-water",
+    "date": "2026-09-01",
+    "category": "Forest Hydrology",
+    "image": "",
+    "pl": {
+      "title": "Woda jako wspólne dobro — dlaczego musimy lepiej rozumieć i chronić zasoby wodne?",
+      "description": "Dlaczego troska o wodę jest ważna dla lasów, zlewni i przyszłości zasobów wodnych.",
+      "url": "pl/troska-o-wode.html"
+    },
+    "en": {
+      "title": "Water as a Common Good — Why We Need to Better Understand and Protect Water Resources",
+      "description": "Why caring for water matters for forests, catchments and the future of water resources.",
+      "url": "en/care-for-water.html"
+    },
+    "es": {
+      "title": "El agua como bien común — Por qué debemos comprender y proteger mejor los recursos hídricos",
+      "description": "Por qué el cuidado del agua es importante para los bosques, las cuencas y el futuro de los recursos hídricos.",
+      "url": "es/cuidado-del-agua.html"
+    }
+  }
+]
