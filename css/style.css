@@ -10,8 +10,9 @@
 @media(max-width:900px){.nav{gap:12px;font-size:12px}.hero-grid,.feature-grid{grid-template-columns:1fr}.hero{padding-top:62px}.topic-grid{grid-template-columns:1fr 1fr}.article-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr 1fr}.map-layout{grid-template-columns:1fr}.hero-card{max-width:700px}}
 @media(max-width:700px){.container{width:min(100% - 28px,1120px)}.menu-toggle{display:block}.nav{display:none;position:absolute;left:14px;right:14px;top:69px;background:#fff;border:1px solid var(--line);padding:12px;flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a{padding:10px}.topic-grid,.info-grid{grid-template-columns:1fr}.section{padding:58px 0}.hero{padding:55px 0}.hero-map{height:280px}.footer-grid{grid-template-columns:1fr}.section-head{align-items:start;gap:20px;flex-direction:column}}
 
-.language-switcher{display:flex;align-items:center;gap:4px;margin-left:4px;border-left:1px solid var(--line);padding-left:14px}
-.language-switcher button{border:0;background:transparent;color:var(--muted);font:700 11px "DM Sans",Arial,sans-serif;padding:6px 5px;cursor:pointer;letter-spacing:.04em}
-.language-switcher button:hover{color:var(--forest)}
-.language-switcher button.active{color:var(--forest);text-decoration:underline;text-underline-offset:4px}
-@media(max-width:900px){.language-switcher{margin-left:auto;border-left:0;padding-left:0}.nav-wrap{gap:12px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:20px;right:20px;top:70px;background:var(--paper);padding:18px;border:1px solid var(--line);box-shadow:0 15px 30px rgba(22,53,43,.08);flex-direction:column;align-items:flex-start}.nav.open{display:flex}}
+/* --- Language switcher: isolated additions, original layout preserved --- */
+.language-switcher{display:flex;align-items:center;gap:2px;margin-left:14px;padding-left:12px;border-left:1px solid var(--line,#d9ded9);flex:0 0 auto}
+.language-switcher button{border:0;background:transparent;color:var(--muted,#6b746e);font:700 11px/1 "DM Sans",Arial,sans-serif;letter-spacing:.04em;padding:6px 5px;cursor:pointer}
+.language-switcher button:hover,.language-switcher button.active{color:var(--forest,#16352b)}
+.language-switcher button.active{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.language-switcher{margin-left:auto;border-left:0;padding-left:0}}
