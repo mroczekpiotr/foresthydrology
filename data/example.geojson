@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest site A",
+        "ndmi": "0.42",
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0,
+          52.5
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest site B",
+        "ndmi": "0.18",
+        "risk": "High"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.1,
+          52.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest site C",
+        "ndmi": "0.29",
+        "risk": "Medium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.6,
+          53.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest site D",
+        "ndmi": "0.11",
+        "risk": "High"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5,
+          52.8
+        ]
+      }
+    }
+  ]
+}
