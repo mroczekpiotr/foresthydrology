@@ -1,52 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Artykuły | ForestHydrology</title>
 <meta name="description" content="Badania, metody i praktyczna wiedza dotycząca hydrologii leśnej.">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-.language-switcher{display:flex;gap:10px;flex-wrap:wrap;margin:1rem 0 2rem}
-.language-switcher a{text-decoration:none;padding:.45rem .7rem;border:1px solid currentColor;border-radius:6px}
-.article-list{display:grid;gap:1.5rem}
-.article-card{padding:1.5rem;border:1px solid rgba(127,127,127,.25);border-radius:10px}
-.article-card h2{margin-top:.4rem}
+.article-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px}
+.article-card{padding:24px;border:1px solid rgba(127,127,127,.25);border-radius:10px}
+.article-card h2{margin:.5rem 0 1rem}
 .article-meta{opacity:.7;font-size:.9rem}
+.language-switcher{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.language-switcher a{text-decoration:none}
 </style>
 </head>
 <body>
-<header><div class="container"><a href="index.html" class="logo">FORESTHYDROLOGY</a>
+<header>
+<div class="container">
+<a href="index.html" class="logo">FORESTHYDROLOGY</a>
 <nav>
 <a href="index.html">Strona główna</a>
 <a href="articles.html" class="active">Artykuły</a>
-<a href="gis.html">GIS</a><a href="remote-sensing.html">Teledetekcja</a>
+<a href="gis.html">GIS</a>
+<a href="remote-sensing.html">Teledetekcja</a>
 <a href="modelling.html">Modelowanie</a>
 <a href="data.html">Dane</a>
-<a href="webgis.html">WebGIS</a><a href="about.html">O projekcie</a>
-</nav></div></header>
-<main><section class="page-header"><div class="container"><h1>Artykuły</h1><p>Badania, metody i praktyczna wiedza dotycząca hydrologii leśnej.</p>
+<a href="webgis.html">WebGIS</a>
+<a href="about.html">O projekcie</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-header">
+<div class="container">
+<h1>Artykuły</h1>
+<p>Badania, metody i praktyczna wiedza dotycząca hydrologii leśnej.</p>
 <div class="language-switcher">
-<a href="../pl/articles.html">🇵🇱 PL</a><a href="../en/articles.html">🇬🇧 EN</a><a href="../es/articles.html">🇪🇸 ES</a>
-</div></div></section>
-<section class="articles-section"><div class="container"><div id="articles-container" class="article-list"></div></div></section></main>
+<a href="../pl/articles.html">🇵🇱 PL</a>
+<a href="../en/articles.html">🇬🇧 EN</a>
+<a href="../es/articles.html">🇪🇸 ES</a>
+</div>
+</div>
+</section>
+<section class="articles-section">
+<div class="container">
+<div id="articles-container" class="article-list"></div>
+</div>
+</section>
+</main>
 <footer><div class="container"><p>© 2026 ForestHydrology</p></div></footer>
 <script>
-async function loadArticles(){
- const c=document.getElementById('articles-container');
- try{
-  const r=await fetch('articles/articles.json');
-  const articles=await r.json();
-  articles.sort((a,b)=>new Date(b.date)-new Date(a.date));
-  c.innerHTML=articles.map(a=>`<article class="article-card">
-  <div class="article-meta">${a.date} · ${a.category}</div>
-  <h2><a href="articles/${a.url}">${a.title}</a></h2>
-  <p>${a.description}</p>
-  <a href="articles/${a.url}">Czytaj więcej →</a>
-  </article>`).join('');
-  if(!c.innerHTML)c.innerHTML='<p>Brak artykułów.</p>';
- }catch(e){c.innerHTML='<p>Brak artykułów.</p>';console.error(e);}
+async function loadArticles() {
+  const c=document.getElementById('articles-container');
+  try {
+    const r=await fetch('articles/articles.json');
+    if(!r.ok) throw new Error('articles.json not found');
+    const articles=await r.json();
+    articles.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    c.innerHTML=articles.map(a=>`<article class="article-card">
+      <div class="article-meta">${a.date} · ${a.category}</div>
+      <h2><a href="articles/${a.url}">${a.title}</a></h2>
+      <p>${a.description}</p>
+      <a href="articles/${a.url}">Czytaj więcej →</a>
+    </article>`).join('');
+    if(!c.innerHTML)c.innerHTML='<p>Brak artykułów.</p>';
+  } catch(e) {
+    console.error(e);
+    c.innerHTML='<p>Brak artykułów.</p>';
+  }
 }
 loadArticles();
 </script>
-</body></html>
+</body>
+</html>
