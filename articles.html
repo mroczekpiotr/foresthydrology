@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Articles | ForestHydrology</title>
+
+    <meta name="description"
+          content="Articles about forest hydrology, GIS, remote sensing, hydrological modelling and water resources.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+            FORESTHYDROLOGY
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="articles.html" class="active">
+                Articles
+            </a>
+
+            <a href="gis.html">
+                GIS
+            </a>
+
+            <a href="remote-sensing.html">
+                Remote Sensing
+            </a>
+
+            <a href="modelling.html">
+                Modelling
+            </a>
+
+            <a href="data.html">
+                Data
+            </a>
+
+            <a href="webgis.html">
+                WebGIS
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1 id="page-title">
+            Articles
+        </h1>
+
+        <p id="page-description">
+            Research, methods and practical knowledge about forest hydrology.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="articles-section">
+
+    <div class="container">
+
+        <!-- Language switcher -->
+
+        <div class="language-switcher">
+
+            <button onclick="setLanguage('pl')">
+                🇵🇱 PL
+            </button>
+
+            <button onclick="setLanguage('en')">
+                🇬🇧 EN
+            </button>
+
+            <button onclick="setLanguage('es')">
+                🇪🇸 ES
+            </button>
+
+        </div>
+
+
+        <!-- Articles will be inserted here -->
+
+        <div id="articles-container">
+
+            <p>
+                Loading articles...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 ForestHydrology
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+let currentLanguage = "en";
+
+
+/* ------------------------------
+   Language
+------------------------------ */
+
+function setLanguage(language) {
+
+    currentLanguage = language;
+
+    localStorage.setItem(
+        "foresthydrology-language",
+        language
+    );
+
+    updatePage();
+
+    loadArticles();
+
+}
+
+
+/* ------------------------------
+   Page translation
+------------------------------ */
+
+function updatePage() {
+
+    const translations = {
+
+        pl: {
+
+            title: "Artykuły",
+
+            description:
+                "Badania, metody i praktyczna wiedza dotycząca hydrologii leśnej.",
+
+            loading:
+                "Ładowanie artykułów..."
+
+        },
+
+        en: {
+
+            title: "Articles",
+
+            description:
+                "Research, methods and practical knowledge about forest hydrology.",
+
+            loading:
+                "Loading articles..."
+
+        },
+
+        es: {
+
+            title: "Artículos",
+
+            description:
+                "Investigación, métodos y conocimiento práctico sobre hidrología forestal.",
+
+            loading:
+                "Cargando artículos..."
+
+        }
+
+    };
+
+
+    document.getElementById("page-title").textContent =
+        translations[currentLanguage].title;
+
+
+    document.getElementById("page-description").textContent =
+        translations[currentLanguage].description;
+
+}
+
+
+/* ------------------------------
+   Load articles
+------------------------------ */
+
+async function loadArticles() {
+
+    const container =
+        document.getElementById("articles-container");
+
+
+    container.innerHTML =
+        `<p>${getLoadingText()}</p>`;
+
+
+    try {
+
+        const response =
+            await fetch("articles/articles.json");
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load articles.json"
+            );
+
+        }
+
+
+        const articles =
+            await response.json();
+
+
+        container.innerHTML = "";
+
+
+        articles
+            .sort(
+                (a, b) =>
+                    new Date(b.date) -
+                    new Date(a.date)
+            )
+            .forEach(article => {
+
+                const language =
+                    article[currentLanguage];
+
+
+                if (!language) return;
+
+
+                const articleCard =
+                    document.createElement("article");
+
+
+                articleCard.className =
+                    "article-card";
+
+
+                articleCard.innerHTML = `
+
+                    ${
+                        article.image
+                        ?
+                        `<img
+                            src="${article.image}"
+                            alt="${language.title}"
+                        >`
+                        :
+                        ""
+                    }
+
+                    <div class="article-card-content">
+
+                        <div class="article-meta">
+
+                            ${article.date}
+                            ·
+                            ${article.category}
+
+                        </div>
+
+
+                        <h2>
+
+                            <a href="articles/${language.url}">
+
+                                ${language.title}
+
+                            </a>
+
+                        </h2>
+
+
+                        <p>
+
+                            ${language.description}
+
+                        </p>
+
+
+                        <a
+                            class="read-more"
+                            href="articles/${language.url}"
+                        >
+
+                            ${getReadMoreText()}
+
+                        </a>
+
+                    </div>
+
+                `;
+
+
+                container.appendChild(
+                    articleCard
+                );
+
+            });
+
+
+        if (!container.innerHTML) {
+
+            container.innerHTML =
+                `<p>${getNoArticlesText()}</p>`;
+
+        }
+
+    }
+
+    catch(error) {
+
+        console.error(error);
+
+
+        container.innerHTML = `
+
+            <p>
+
+                Unable to load articles.
+
+            </p>
+
+        `;
+
+    }
+
+}
+
+
+/* ------------------------------
+   Text
+------------------------------ */
+
+function getLoadingText() {
+
+    const text = {
+
+        pl: "Ładowanie artykułów...",
+
+        en: "Loading articles...",
+
+        es: "Cargando artículos..."
+
+    };
+
+    return text[currentLanguage];
+
+}
+
+
+function getReadMoreText() {
+
+    const text = {
+
+        pl: "Czytaj więcej →",
+
+        en: "Read more →",
+
+        es: "Leer más →"
+
+    };
+
+    return text[currentLanguage];
+
+}
+
+
+function getNoArticlesText() {
+
+    const text = {
+
+        pl: "Brak artykułów.",
+
+        en: "No articles available.",
+
+        es: "No hay artículos disponibles."
+
+    };
+
+    return text[currentLanguage];
+
+}
+
+
+/* ------------------------------
+   Start
+------------------------------ */
+
+const savedLanguage =
+    localStorage.getItem(
+        "foresthydrology-language"
+    );
+
+
+if (
+    savedLanguage === "pl" ||
+    savedLanguage === "en" ||
+    savedLanguage === "es"
+) {
+
+    currentLanguage =
+        savedLanguage;
+
+}
+
+
+updatePage();
+
+loadArticles();
+
+</script>
+
+</body>
+
+</html>
