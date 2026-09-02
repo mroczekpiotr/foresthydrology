@@ -1,0 +1,41 @@
+{
+  "lang": "pl",
+  "siteTitle": "Forest Hydrology",
+  "nav": {
+    "articles": "Artykuły",
+    "gis": "GIS",
+    "remoteSensing": "Teledetekcja",
+    "modelling": "Modelowanie",
+    "data": "Dane",
+    "webgis": "WebGIS",
+    "about": "O stronie"
+  },
+  "categories": {
+    "gis": { "name": "GIS", "desc": "Analiza przestrzenna zlewni, rzeźby terenu i pokrycia terenu." },
+    "remote-sensing": { "name": "Teledetekcja", "desc": "Obserwacje satelitarne i lotnicze zalesionych zlewni." },
+    "modelling": { "name": "Modelowanie", "desc": "Modele hydrologiczne i ekohydrologiczne zlewni leśnych." },
+    "data": { "name": "Dane", "desc": "Otwarte zbiory danych, czujniki i pomiary terenowe." },
+    "webgis": { "name": "WebGIS", "desc": "Interaktywne mapy i narzędzia przestrzenne dostępne w przeglądarce." }
+  },
+  "hero": {
+    "eyebrow": "Forest Hydrology",
+    "title": "Zrozumieć oddziaływania między lasem a wodą poprzez dane przestrzenne i modelowanie.",
+    "lead": "Notatki, metody i otwarte dane o tym, jak lasy kształtują przepływ wody w krajobrazie."
+  },
+  "ui": {
+    "readMore": "Zobacz",
+    "publishedOn": "Opublikowano",
+    "backToArticles": "Powrót do artykułów",
+    "notAvailable": "Ten artykuł nie jest jeszcze dostępny w tym języku.",
+    "chooseAnother": "Przeczytaj w innym języku:",
+    "allArticles": "Artykuły",
+    "recentArticles": "Najnowsze artykuły",
+    "exploreSections": "Przeglądaj według tematu",
+    "noPosts": "Brak artykułów w tej kategorii — zajrzyj tu wkrótce."
+  },
+  "footer": {
+    "tagline": "Forest hydrology — notatki o danych przestrzennych i modelowaniu.",
+    "rights": "Niezależne notatki badawcze."
+  },
+  "about": { "title": "O stronie" }
+}

@@ -1,0 +1,41 @@
+{
+  "lang": "en",
+  "siteTitle": "Forest Hydrology",
+  "nav": {
+    "articles": "Articles",
+    "gis": "GIS",
+    "remoteSensing": "Remote Sensing",
+    "modelling": "Modelling",
+    "data": "Data",
+    "webgis": "WebGIS",
+    "about": "About"
+  },
+  "categories": {
+    "gis": { "name": "GIS", "desc": "Spatial analysis of catchments, terrain and land cover." },
+    "remote-sensing": { "name": "Remote Sensing", "desc": "Satellite and airborne observation of forested watersheds." },
+    "modelling": { "name": "Modelling", "desc": "Hydrological and ecohydrological models of forest catchments." },
+    "data": { "name": "Data", "desc": "Open datasets, sensors and field measurements." },
+    "webgis": { "name": "WebGIS", "desc": "Interactive maps and web-based spatial tools." }
+  },
+  "hero": {
+    "eyebrow": "Forest Hydrology",
+    "title": "Understanding forest–water interactions through spatial data and modelling.",
+    "lead": "Notes, methods and open data on how forests shape the way water moves through the landscape."
+  },
+  "ui": {
+    "readMore": "Explore",
+    "publishedOn": "Published",
+    "backToArticles": "Back to articles",
+    "notAvailable": "This article is not yet available in this language.",
+    "chooseAnother": "Read it in:",
+    "allArticles": "Articles",
+    "recentArticles": "Recent articles",
+    "exploreSections": "Explore by topic",
+    "noPosts": "No articles here yet — check back soon."
+  },
+  "footer": {
+    "tagline": "Forest hydrology — spatial data & modelling notes.",
+    "rights": "Independent research notes."
+  },
+  "about": { "title": "About" }
+}
