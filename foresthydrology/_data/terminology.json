@@ -1,0 +1,50 @@
+{
+  "forest hydrology": {
+    "pl": "hydrologia leśna",
+    "en": "forest hydrology",
+    "es": "hidrología forestal",
+    "de": "Waldhydrologie"
+  },
+  "soil moisture": {
+    "pl": "wilgotność gleby",
+    "en": "soil moisture",
+    "es": "humedad del suelo",
+    "de": "Bodenfeuchte"
+  },
+  "water table": {
+    "pl": "zwierciadło wód gruntowych",
+    "en": "water table",
+    "es": "nivel freático",
+    "de": "Grundwasserspiegel"
+  },
+  "remote sensing": {
+    "pl": "teledetekcja",
+    "en": "remote sensing",
+    "es": "teledetección",
+    "de": "Fernerkundung"
+  },
+  "surface water": {
+    "pl": "wody powierzchniowe",
+    "en": "surface water",
+    "es": "aguas superficiales",
+    "de": "Oberflächengewässer"
+  },
+  "wetland": {
+    "pl": "mokradło",
+    "en": "wetland",
+    "es": "humedal",
+    "de": "Feuchtgebiet"
+  },
+  "watershed": {
+    "pl": "zlewnia",
+    "en": "watershed",
+    "es": "cuenca hidrográfica",
+    "de": "Einzugsgebiet"
+  },
+  "evapotranspiration": {
+    "pl": "ewapotranspiracja",
+    "en": "evapotranspiration",
+    "es": "evapotranspiración",
+    "de": "Evapotranspiration"
+  }
+}

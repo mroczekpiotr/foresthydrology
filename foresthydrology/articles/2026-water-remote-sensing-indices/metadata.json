@@ -1,0 +1,19 @@
+{
+  "id": "2026-water-remote-sensing-indices",
+  "date": "2026-09-03",
+  "category": "Remote Sensing",
+  "slug": "water-remote-sensing-indices",
+  "languages": [
+    "pl",
+    "en",
+    "es",
+    "de"
+  ],
+  "original_language": "pl",
+  "title": {
+    "pl": "Indeksy teledetekcyjne wód i wilgotności: NDWI, MNDWI, NDMI i inne",
+    "en": "Remote-sensing indices for water and moisture: NDWI, MNDWI, NDMI and more",
+    "es": "Índices de teledetección para agua y humedad: NDWI, MNDWI, NDMI y otros",
+    "de": "Fernerkundungsindizes für Wasser und Feuchte: NDWI, MNDWI, NDMI und weitere"
+  }
+}
