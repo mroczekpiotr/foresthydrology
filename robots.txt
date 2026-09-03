@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mroczekpiotr.github.io/foresthydrology/sitemap.xml

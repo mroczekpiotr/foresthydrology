@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ForestHydrology.com</title>
+  <meta name="description" content="ForestHydrology.com — a multilingual science outlet on forest hydrology.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var known = ["pl","en","es","de"];
+      var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+      var target = known.indexOf(nav) !== -1 ? nav : "en";
+      if (!location.search.includes("nolang")) {
+        location.replace(target + "/");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="lang-landing">
+    <div class="lang-landing-card">
+      <img src="assets/img/logo.svg" alt="ForestHydrology">
+      <h1>ForestHydrology.com</h1>
+      <p>Choose your language / Wybierz język / Elige tu idioma / Sprache wählen</p>
+      <div class="lang-options">
+        <a href="pl/">Polski<small>Nauka o wodzie w lasach — badania i wiedza podane w przystępny sposób.</small></a>
+        <a href="en/">English<small>The science of water in forests — research and knowledge, made accessible.</small></a>
+        <a href="es/">Español<small>La ciencia del agua en los bosques: investigación y conocimiento accesibles.</small></a>
+        <a href="de/">Deutsch<small>Die Wissenschaft des Wassers im Wald — Forschung und Wissen, verständlich aufbereitet.</small></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
