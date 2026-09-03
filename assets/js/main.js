@@ -1,0 +1,1 @@
+document.querySelectorAll('a[data-lang]').forEach(a=>{a.addEventListener('click',()=>localStorage.setItem('foresthydrology-lang',a.dataset.lang))});
