@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="fhLogoTitle">
+  <title id="fhLogoTitle">ForestHydrology</title>
+  <defs>
+    <linearGradient id="fhLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f7d63"/>
+      <stop offset="100%" stop-color="#2a6f97"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="url(#fhLogoGrad)"/>
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- canopy: two leaf lobes -->
+  <path d="M32 12c-9 3-15 10-15 18 0 6.5 5.5 11 12 11h1c0-11 0.5-21 2-29z"
+        fill="#ffffff" fill-opacity="0.95"/>
+  <path d="M32 12c9 3 15 10 15 18 0 6.5-5.5 11-12 11h-1c0-11-0.5-21-2-29z"
+        fill="#ffffff" fill-opacity="0.75"/>
+  <!-- trunk / stem flowing down -->
+  <path d="M31 40h2v6h-2z" fill="#ffffff" fill-opacity="0.9"/>
+  <!-- water drop -->
+  <path d="M32 44c4.5 4.6 6.8 8 6.8 10.8a6.8 6.8 0 0 1-13.6 0C25.2 52 27.5 48.6 32 44z"
+        fill="#ffffff"/>
+  <path d="M32 44c4.5 4.6 6.8 8 6.8 10.8a6.8 6.8 0 0 1-2.2 5.05C38 58.4 38.6 56 38.6 54.4c0-2.5-2-5.6-6.6-10.4z"
+        fill="#bfe3ea"/>
+</svg>

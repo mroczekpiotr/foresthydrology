@@ -1,0 +1,16 @@
+{
+  "name": "foresthydrology",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multilingual (PL/EN/ES/DE) static science site about forest hydrology, built for GitHub Pages.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "translate": "node scripts/translate.js",
+    "build": "node scripts/build.js",
+    "prebuild": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "serve": "python3 -m http.server 8000 -d dist"
+  }
+}
