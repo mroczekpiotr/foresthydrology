@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://foresthydrology.com/sitemap.xml
